@@ -1,0 +1,46 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>Centro</title>
+</head>
+<body>
+    <div>
+    	<h4>Centro</h4>
+		<div> Nome: 
+			<span th:text="${centro.nome}"></span>
+   		</div>
+		<div> Indirizzo: 
+			<span th:text="${centro.indirizzo}"></span>
+   		</div>
+		<div> Telefono: 
+			<span th:text="${centro.telefono}"></span>
+   		</div>
+   		<div> Mail: 
+			<span th:text="${centro.mail}"></span>
+   		</div>
+		<div> Capienza: 
+			<span th:text="${centro.capienza}"></span>
+   		</div>
+   		
+  		<div> 
+  		<a th:href="@{/addAllievo}">Inserisci nuovo allievo</a>
+  		</div>
+  		<div>
+  		<a th:href="@{/addAttivita}">Inserisci nuova attività</a>
+  		</div>
+  		<div>
+  		<a th:href="@{/attivita}">Lista di tutte le attività</a>
+  		</div>
+  		<div>
+  		<a th:href="@{/addAllievoAdAttivita}">Inserisci allievo ad attività</a>
+  		</div>
+  		
+   		
+   		
+   		
+   	
+		
+   		
+    </div>
+</body>
+</html>

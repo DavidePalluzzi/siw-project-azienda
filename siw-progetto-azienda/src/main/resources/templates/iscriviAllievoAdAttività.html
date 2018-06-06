@@ -1,0 +1,27 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns="http://www.w3.org/1999/html">
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+	<div>
+		<h4 class="title">Iscrivi allievo ad attività</h4>
+		<p th:text="${exists}"></p>
+	</div>
+	
+	<div class="col-lg-3" th:object="${allievi}">
+    <select class="form-control" id="allievi" name="allievi">
+        <option value="">Select Test Order</option>
+        <option th:each="allievo : ${allievi}"
+                th:value="${allievo.id}"
+                th:text="${allievo.id}+' : '+${allievo.nome}"></option>
+    </select>
+</div>
+
+
+    
+    
+	
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns="http://www.w3.org/1999/html">
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+	<div>
+		<h4 class="title">Inserisci centro</h4>
+		<p th:text="${exists}"></p>
+	</div>
+	<form th:action="@{/centri}" method="POST" th:object="${centro}">
+		<table>
+			<tr>
+				<td>Nome:</td>
+				<td><input type="text" th:field="*{nome}" /></td>
+				<td th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}"></td>
+			</tr>		
+			<tr>
+				<td>Indirizzo:</td>
+				<td><input type="text" th:field="*{indirizzo}" /></td>
+				<td th:if="${#fields.hasErrors('indirizzo')}" th:errors="*{indirizzo}"></td>
+			</tr>
+			<tr>
+				<td>Telefono:</td>
+				<td><input type="text" th:field="*{telefono}" /></td>
+				<td th:if="${#fields.hasErrors('telefono')}" th:errors="*{telefono}"></td>
+			</tr>
+			<tr>
+				<td>Mail:</td>
+				<td><input type="text" th:field="*{mail}" /></td>
+				<td th:if="${#fields.hasErrors('mail')}" th:errors="*{mail}"></td>
+			</tr>
+			<tr>
+				<td>Capienza:</td>
+				<td><input type="text" th:field="*{capienza}" /></td>
+				<td th:if="${#fields.hasErrors('capienza')}" th:errors="*{capienza}"></td>
+			</tr>
+			<tr>
+				<td><button type="submit">Invio</button></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

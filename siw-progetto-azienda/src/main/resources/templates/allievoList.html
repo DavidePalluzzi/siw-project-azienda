@@ -1,0 +1,30 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>Allievi</title>
+    <link rel="stylesheet" th:href="@{/css/rules.css}" type="text/css" />
+</head>
+<body>
+    <div>
+    	<h4>Allievi</h4>
+		<div>
+			<table>
+				<tr><td> ID </td>              <td> NOME </td></tr>
+				
+				<tr th:each="allievo : ${allievi}">
+				<td>
+					<a th:href="@{'/allievi' + '/' + ${allievo.id}}">
+					<span th:text="${allievo.id}"></span>
+					</a>
+				</td>
+				<td>
+					<a th:href="@{'/allievi' + '/' + ${allievo.id}}">
+					<span th:text="${allievo.nome}"></span>
+					</a>
+				</td>
+                </tr>
+            </table>
+   		</div>
+    </div>
+</body>
+</html>

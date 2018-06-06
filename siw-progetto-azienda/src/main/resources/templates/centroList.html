@@ -1,0 +1,30 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>Centri di formazione</title>
+    <link rel="stylesheet" th:href="@{/css/rules.css}" type="text/css" />
+</head>
+<body>
+    <div>
+    	<h4>Centri di formazione</h4>
+		<div>
+			<table>
+				<tr><td> ID </td>              <td> NOME </td></tr>
+				
+				<tr th:each="centro : ${centri}">
+				<td>
+					<a th:href="@{'/centri' + '/' + ${centro.id}}">
+					<span th:text="${centro.id}"></span>
+					</a>	
+				</td>
+				<td>
+					<a th:href="@{'/centri' + '/' + ${centro.id}}">
+					<span th:text="${centro.nome}"></span>
+					</a>
+				</td>						
+                </tr>
+            </table>
+   		</div>
+    </div>
+</body>
+</html>

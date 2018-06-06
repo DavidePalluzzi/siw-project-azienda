@@ -1,0 +1,6 @@
+table {
+  table-layout : fixed;
+  width : 300px;
+  background : Silver;
+  caption-side : bottom;
+}
